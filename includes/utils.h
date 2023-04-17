@@ -26,10 +26,10 @@
 
 enum e_direction
 {
-	down,
-	left,
-	right,
-	up,
+	down = 0,
+	left = 1,
+	right = 2,
+	up = 3,
 };
 
 enum e_state

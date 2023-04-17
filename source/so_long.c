@@ -11,7 +11,6 @@ int	main(int argc, char **argv)
 
 	if (argc == 2 && (check_ber_file(argv[1])))
 	{
-		// printf("&game: %p\n", &game);
 		init_game(&game, argv[1]);
 	}
 	else if (argc == 2 && !(check_ber_file(argv[1])))
@@ -29,9 +28,9 @@ void	init_game(t_game *game, char *path)
 	init_window(game);
 	init_images(game);
 	render_map(game);
-	init_hook(game, KEY_RELEASE, KEY_RELEASE_MASK, key_check);
-	init_hook(game, DESTROY_NOTIFY, NO_EVENT_MASK, red_cross);
-	init_hook(game, EXPOSE, EXPOSURE_MASK, mini_maker);
+	init_hook(game, KEY_RELEASE, 1L<<0, key_check);
+	init_hook(game, DESTROY_NOTIFY, 0L, red_cross);
+	init_hook(game, EXPOSE, 1L<<15, mini_maker);
 	mlx_loop(game->mlx_pointer);
 }
 
