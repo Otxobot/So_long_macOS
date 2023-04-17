@@ -29,5 +29,5 @@ void	player_init(t_game	*game)
 static void	render_player(t_game *game)
 {
 	mlx_put_image_to_window(game->mlx_pointer, game->mlx_win,
-		game->character.ptr, game->character.x, game->character.y);
+	game->character.ptr, game->character.x, game->character.y);
 }

@@ -44,6 +44,7 @@ void	render_map(t_game *game)
 		coord.x = 0;
 		while (game->plot.map[coord.y][coord.x])
 		{
+			// printf("game->plot.map: %c\n", game->plot.map[coord.y][coord.x]);
 			map_check_one(game, coord.y, coord.x);
 			coord.x++;
 		}
