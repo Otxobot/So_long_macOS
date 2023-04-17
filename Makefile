@@ -1,0 +1,48 @@
+NAME = so_long
+
+CC = gcc
+
+CFLAGS = -Wall -Wextra -Werror
+
+#MLX			=   -lmlx -lXext -lX11
+
+LIB_FLAGS	= -L ./libft -lft
+
+INCLUDE	= -I ./includes
+
+SOURCE = ./source/
+
+MAP =		map/map.c map/validation.c map/update.c map/utils.c  map/render_player.c
+
+WINDOW =	window/window.c window/screen_validations.c
+
+MOVEMENTS =		movements/left.c movements/right.c movements/up.c movements/down.c movements/utils.c
+
+SRC =		$(addprefix $(SOURCE), $(MOVEMENTS) $(MAP) $(WINDOW) endgame.c images.c so_long.c)
+
+OBJ = $(SRC:%.c=%.o)
+
+
+
+all: $(NAME)
+
+%.o: %.c
+	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $(<:%.c=%.o)
+
+$(NAME): $(OBJ)
+	rm -rf $(NAME)
+	make all -C ./libft
+	$(CC) $(CFLAGS) $(OBJ) -Lmlx -lmlx -framework OpenGL -framework AppKit -o $(NAME) $(LIB_FLAGS)
+
+clean:
+	rm -rf $(OBJ)
+	rm -rf ./a.out
+	make clean -C ./libft
+
+fclean: clean
+	rm -rf $(NAME)
+	make fclean -C ./libft
+
+re: fclean all
+
+.PHONY: all clean fclean re
