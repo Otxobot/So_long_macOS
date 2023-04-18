@@ -21,7 +21,6 @@ void	free_map(t_game	*game)
 {
 	while (game->plot.height > 0)
 	{
-		// printf("game->plot.map[game->plot.hegith - 1]: %s\n", game->plot.map[game->plot.height - 1]);
 		free(game->plot.map[game->plot.height - 1]);
 		game->plot.height--;
 	}

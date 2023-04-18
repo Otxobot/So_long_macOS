@@ -26,7 +26,7 @@ void	print_moves(t_game *game)
 	}
 	else if (game->plot.map[game->character.y / SPRITE_SIZE][game->character.x / SPRITE_SIZE] == 'E' && game->i.collectible == 0)
 	{
-		endgame(GREEN"\n\nThe End! :)"ENDC, game, game_over);
+		endgame("\n\nThe End! :)", game, game_over);
 	}
 	ft_putstr_fd("\rMovements: ", 1);
 	ft_putnbr_fd(game->i.movements, 1);
