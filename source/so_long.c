@@ -5,17 +5,17 @@
 // static bool	check_ber_file(const char *argv);
 // static void	init_hook(t_game *game, int event, int mask, int (*f)());
 
-int	main(int argc, char **argv)
+int	main(int ac, char **av)
 {
 	t_game	game;
 
-	if (argc == 2 && (check_ber_file(argv[1])))
+	if (ac == 2 && (check_ber_file(av[1])))
 	{
-		init_game(&game, argv[1]);
+		init_game(&game, av[1]);
 	}
-	else if (argc == 2 && !(check_ber_file(argv[1])))
+	else if (ac == 2 && !(check_ber_file(av[1])))
 		endgame("Can't open file. The format is not supported!", &game, error);
-	else if (argc > 2)
+	else if (ac > 2)
 		endgame("Can't open multiple files!", &game, error);
 	else
 		endgame("Please specify file name!", &game, error);
