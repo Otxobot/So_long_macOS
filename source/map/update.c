@@ -11,7 +11,7 @@ void	init_map(t_game *game, char *path)
 	read_map(game, fd);
 	game->plot.length = line_validation(game->plot.map, game);
 	close(fd);
-	//return ;
+	return ;
 }
 
 static void	read_map(t_game *game, int fd)
@@ -31,7 +31,6 @@ static void	read_map(t_game *game, int fd)
 		free(game->plot.line);
 		game->plot.height++;
 	}
-	// printf("game->plot.height: %d\n", game->plot.height);
 	game->i = start_counter(temp, game);
 	game->plot.map = ft_split(temp, '\n');
 	free(temp);
