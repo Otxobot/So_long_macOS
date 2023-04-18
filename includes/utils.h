@@ -10,9 +10,6 @@
 # define ARROWLEFT	123
 # define ARROWRIGHT	124
 # define ESC	53
-# define RED	"\033[1m\033[31m"
-# define GREEN	"\033[1m\033[32m"
-# define ENDC	"\033[0m"
 # define WINDOW_NAME	"So_long 2D game"
 # define SPRITE_SIZE	32
 

@@ -40,15 +40,15 @@ void	endgame(char *message, t_game *game, enum e_state i)
 	}
 	else if (i == error)
 	{
-		printf(RED"Error\n%s\n"ENDC, message);
+		printf("Error\n%s\n", message);
 		exit(1);
 	}
 	else if (i == file_error)
 	{
-		printf(RED"Error\n%s\n"ENDC, message);
+		printf("Error\n%s\n", message);
 		exit(1);
 	}
-	printf(RED"Error\n%s\n"ENDC, message);
+	printf("Error\n%s\n", message);
 	destroy_image(game);
 	exit(1);
 	return ;
