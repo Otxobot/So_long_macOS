@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 09:37:27 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/19 09:37:28 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/19 16:06:19 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,9 @@ bool		is_valid_character(t_game *game, int y, int x);
 bool		is_double_line(char *string_map, int i);
 void		is_elements_number_valid( \
 t_game *game, t_counter *cnt, char *temp);
+int			paint_floor(t_game *game, int x, int y);
+t_point		find_p(t_game *game);
+void		check_if_possible(t_game *game);
 
 int			open_file(char *path);
 t_counter	new_counter(void);

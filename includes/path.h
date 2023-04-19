@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 09:37:31 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/19 09:37:32 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/19 09:59:08 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 # define WALL_PATH     "./img/1-wall-blue.xpm"
 # define FLOOR_PATH    "./img/0-empty-green.xpm"
-# define COLLECT_PATH  "./img/gold_coin.xpm"
+# define COLLECT_PATH  "./img/c-collect-brown.xpm"
 # define PORTAL_PATH   "./img/e-end-yellow.xpm"
 # define CHAR_I_PATH   "./img/p-start-black.xpm"
 # define CHAR_L_PATH   "./img/p-start-black.xpm"

@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 09:36:35 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/19 09:36:36 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/19 15:53:39 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ bool	is_rectangular(t_game *game)
 
 bool	is_valid_character(t_game *game, int y, int x)
 {
-	if (!(ft_strchr("01CEP", game->plot.map[y][x])))
+	if (!(ft_strchr("01CEPX", game->plot.map[y][x])))
 	{
 		return (false);
 	}

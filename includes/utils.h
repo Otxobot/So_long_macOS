@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 09:37:23 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/19 09:37:24 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/19 16:01:02 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ typedef struct s_img
 typedef struct s_map
 {
 	char	**map;
+	char	**mapcopy;
 	int		height;
 	int		length;
 	char	*line;
