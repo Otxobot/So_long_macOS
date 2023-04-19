@@ -39,14 +39,6 @@ int	line_validation(char **map, t_game *game)
 	i = 0;
 	point.x = 0;
 	point.y = ft_strlen(map[0]);
-	// printf("map: %s\n", map[0]);
-	// printf("length: %ld\n", ft_strlen(map[1]));
-	// printf("map: %s\n", map[1]);
-	// printf("map: %s\n", map[2]);
-	// printf("map: %s\n", map[3]);
-	// printf("map: %s\n", map[4]);
-	// printf("map: %s\n", map[5]);
-	// printf("map: %s\n", map[6]);
 	while (map[i] != 0)
 	{
 		point.x = ft_strlen(map[i]);

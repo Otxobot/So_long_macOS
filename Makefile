@@ -4,8 +4,6 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-#MLX			=   -lmlx -lXext -lX11
-
 LIB_FLAGS	= -L ./libft -lft
 
 INCLUDE	= -I ./includes
@@ -21,8 +19,6 @@ MOVEMENTS =		movements/left.c movements/right.c movements/up.c movements/down.c 
 SRC =		$(addprefix $(SOURCE), $(MOVEMENTS) $(MAP) $(WINDOW) endgame.c images.c so_long.c)
 
 OBJ = $(SRC:%.c=%.o)
-
-
 
 all: $(NAME)
 
