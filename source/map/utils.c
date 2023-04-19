@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 09:36:40 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/19 16:46:18 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/19 17:03:34 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,6 @@ t_point	find_p(t_game *game)
 
 			if (game->plot.map[cord.y][cord.x] == 'P')
 			{
-				printf("%d\n", cord.x);
-				printf("%d\n", cord.y);
 				return(cord);
 			}
 			cord.x++;
@@ -101,19 +99,19 @@ void		check_if_possible(t_game *game)
 	x = a.x;
 	y = a.y;
 
-	printf("x:%d\n", x);
-	printf("y:%d\n", y);
+	printf("cordinate x:%d\n", x);
+	printf("cordinate y:%d\n", y);
 
-	printf("%s\n", game->plot.mapcopy[0]);
-	printf("%s\n", game->plot.mapcopy[1]);
-	printf("%s\n", game->plot.mapcopy[2]);
-	printf("%s\n", game->plot.mapcopy[3]);
-	printf("----------------------------\n");
+	printf("before paint: %s\n", game->plot.mapcopy[0]);
+	printf("before paint: %s\n", game->plot.mapcopy[1]);
+	printf("before paint: %s\n", game->plot.mapcopy[2]);
+	printf("before paint: %s\n", game->plot.mapcopy[3]);
+	printf("------------------------------------------\n");
 	paint_floor(game, x, y);
-	printf("%s\n", game->plot.mapcopy[0]);
-	printf("%s\n", game->plot.mapcopy[1]);
-	printf("%s\n", game->plot.mapcopy[2]);
-	printf("%s\n", game->plot.mapcopy[3]);
+	printf("after paint: %s\n", game->plot.mapcopy[0]);
+	printf("after paint: %s\n", game->plot.mapcopy[1]);
+	printf("after paint: %s\n", game->plot.mapcopy[2]);
+	printf("after paint: %s\n", game->plot.mapcopy[3]);
 }
 
 int	paint_floor(t_game *game, int x, int y)

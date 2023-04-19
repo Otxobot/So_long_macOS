@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 15:24:52 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/19 16:44:39 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/19 17:05:54 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,9 @@ static void	read_map(t_game *game, int fd)
 		game->plot.height++;
 	}
 	game->i = start_counter(temp, game);
+	game->plot.mapcopy = ft_split(temp, '\n');
 	game->plot.map = ft_split(temp, '\n');
-	game->plot.mapcopy = game->plot.map;
+	// game->plot.mapcopy = game->plot.map;
 	free(temp);
 	return ;
 }
