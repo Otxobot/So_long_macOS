@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 09:36:40 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/20 10:15:47 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/20 10:59:23 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,23 +100,20 @@ void		check_if_possible(t_game *game)
 	x = a.x;
 	y = a.y;
 
-	printf("cordinate x:%d\n", x);
-	printf("cordinate y:%d\n", y);
-
-	printf("before paint: %s\n", game->plot.mapcopy[0]);
-	printf("before paint: %s\n", game->plot.mapcopy[1]);
-	printf("before paint: %s\n", game->plot.mapcopy[2]);
-	printf("before paint: %s\n", game->plot.mapcopy[3]);
-	printf("before paint: %s\n", game->plot.mapcopy[4]);
-	printf("before paint: %s\n", game->plot.mapcopy[5]);
-	printf("------------------------------------------\n");
+	// printf("before paint: %s\n", game->plot.mapcopy[0]);
+	// printf("before paint: %s\n", game->plot.mapcopy[1]);
+	// printf("before paint: %s\n", game->plot.mapcopy[2]);
+	// printf("before paint: %s\n", game->plot.mapcopy[3]);
+	// printf("before paint: %s\n", game->plot.mapcopy[4]);
+	// printf("before paint: %s\n", game->plot.mapcopy[5]);
+	// printf("------------------------------------------\n");
 	paint_floor(game, x, y);
-	printf("after paint: %s\n", game->plot.mapcopy[0]);
-	printf("after paint: %s\n", game->plot.mapcopy[1]);
-	printf("after paint: %s\n", game->plot.mapcopy[2]);
-	printf("after paint: %s\n", game->plot.mapcopy[3]);
-	printf("after paint: %s\n", game->plot.mapcopy[4]);
-	printf("after paint: %s\n", game->plot.mapcopy[5]);
+	// printf("after paint: %s\n", game->plot.mapcopy[0]);
+	// printf("after paint: %s\n", game->plot.mapcopy[1]);
+	// printf("after paint: %s\n", game->plot.mapcopy[2]);
+	// printf("after paint: %s\n", game->plot.mapcopy[3]);
+	// printf("after paint: %s\n", game->plot.mapcopy[4]);
+	// printf("after paint: %s\n", game->plot.mapcopy[5]);
 	map_possible(game);
 }
 
@@ -133,7 +130,7 @@ int		map_possible(t_game *game)
 		{
 			if (game->plot.mapcopy[e.y][e.x] == 'E' || game->plot.mapcopy[e.y][e.x] == 'C')
 			{
-				endgame("map isn't possible", game, game_over);
+				endgame("map isn't possible", game, error);
 				return (0);
 			}
 			e.x++;
