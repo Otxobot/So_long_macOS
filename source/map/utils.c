@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 09:36:40 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/19 17:03:34 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/20 10:15:47 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,8 +90,9 @@ t_point	find_p(t_game *game)
 void		check_if_possible(t_game *game)
 {
 	t_point	a;
-	a.y = 	0;
-	a.x = 	0;
+
+	a.y = 0;
+	a.x = 0;
 	int		x;
 	int 	y;
 
@@ -106,12 +107,40 @@ void		check_if_possible(t_game *game)
 	printf("before paint: %s\n", game->plot.mapcopy[1]);
 	printf("before paint: %s\n", game->plot.mapcopy[2]);
 	printf("before paint: %s\n", game->plot.mapcopy[3]);
+	printf("before paint: %s\n", game->plot.mapcopy[4]);
+	printf("before paint: %s\n", game->plot.mapcopy[5]);
 	printf("------------------------------------------\n");
 	paint_floor(game, x, y);
 	printf("after paint: %s\n", game->plot.mapcopy[0]);
 	printf("after paint: %s\n", game->plot.mapcopy[1]);
 	printf("after paint: %s\n", game->plot.mapcopy[2]);
 	printf("after paint: %s\n", game->plot.mapcopy[3]);
+	printf("after paint: %s\n", game->plot.mapcopy[4]);
+	printf("after paint: %s\n", game->plot.mapcopy[5]);
+	map_possible(game);
+}
+
+int		map_possible(t_game *game)
+{
+	t_point e;
+	e.y = 0;
+	e.x = 0;
+
+	while (game->plot.mapcopy[e.y])
+	{
+		e.x = 0;
+		while (game->plot.mapcopy[e.y][e.x])
+		{
+			if (game->plot.mapcopy[e.y][e.x] == 'E' || game->plot.mapcopy[e.y][e.x] == 'C')
+			{
+				endgame("map isn't possible", game, game_over);
+				return (0);
+			}
+			e.x++;
+		}
+		e.y++;
+	}
+	return (1);
 }
 
 int	paint_floor(t_game *game, int x, int y)
@@ -125,7 +154,7 @@ int	paint_floor(t_game *game, int x, int y)
 		*c = 'X';
 	if (*c == 'E')
 		return (*c = *c + 32, 0);
-	if (*c == 'C' || *c == 'H' || *c == 'V')
+	if (*c == 'C')
 		*c = *c + 32;
 	if (y < game->plot.height - 1 && ft_strchr(s, game->plot.mapcopy[y + 1][x]) != 0)
 	{
