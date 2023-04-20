@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 09:36:40 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/20 10:59:23 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/20 11:39:29 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,7 +150,7 @@ int	paint_floor(t_game *game, int x, int y)
 	if (*c == '0')
 		*c = 'X';
 	if (*c == 'E')
-		return (*c = *c + 32, 0);
+		*c = *c + 32;
 	if (*c == 'C')
 		*c = *c + 32;
 	if (y < game->plot.height - 1 && ft_strchr(s, game->plot.mapcopy[y + 1][x]) != 0)
