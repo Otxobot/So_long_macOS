@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 14:58:23 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/19 15:58:44 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/20 11:54:59 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ void	init_game(t_game *game, char *path)
 	init_window(game);
 	init_images(game);
 	render_map(game);
-	init_hook(game, KEY_RELEASE, 1L<<0, key_check);
-	init_hook(game, DESTROY_NOTIFY, 0L, red_cross);
-	init_hook(game, EXPOSE, 1L<<15, mini_maker);
+	init_hook (game, KEY_RELEASE, 1L << 0, key_check);
+	init_hook (game, DESTROY_NOTIFY, 0L, red_cross);
+	init_hook (game, EXPOSE, 1L << 15, mini_maker);
 	mlx_loop(game->mlx_pointer);
 }
 

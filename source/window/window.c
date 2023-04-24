@@ -6,13 +6,13 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 09:35:55 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/19 09:59:58 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/24 10:45:56 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
-int	red_cross(t_game *game)
+int	  red_cross(t_game *game)
 {
 	endgame("", game, event_ending);
 	return (0);
