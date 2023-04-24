@@ -6,19 +6,20 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 15:24:52 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/20 10:00:26 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/24 11:38:11 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
 static void			read_map(t_game *game, int fd);
-static t_counter	start_counter(char *string_map, t_game *game);
-static void			count_elements(t_counter *cnt, char c);
+static t_count		start_count(char *string_map, t_game *game);
+static void			count_elements(t_count *cnt, char c);
 
 void	init_map(t_game *game, char *path)
 {
 	int	fd;
+
 	fd = open_file(path);
 	read_map(game, fd);
 	game->plot.length = line_validation(game->plot.map, game);
@@ -44,16 +45,16 @@ static void	read_map(t_game *game, int fd)
 		free(game->plot.line);
 		game->plot.height++;
 	}
-	game->i = start_counter(temp, game);
+	game->i = start_count(temp, game);
 	game->plot.mapcopy = ft_split(temp, '\n');
 	game->plot.map = ft_split(temp, '\n');
 	free(temp);
 	return ;
 }
 
-static t_counter	start_counter(char *string_map, t_game *game)
+static t_count	start_count(char *string_map, t_game *game)
 {
-	t_counter	cnt;
+	t_count		cnt;
 	int			i;
 
 	cnt = new_counter();
@@ -72,7 +73,7 @@ static t_counter	start_counter(char *string_map, t_game *game)
 	return (cnt);
 }
 
-static void	count_elements(t_counter *cnt, char c)
+static void	count_elements(t_count *cnt, char c)
 {
 	if (c == 'C')
 		cnt->collectible++;

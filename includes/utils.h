@@ -6,10 +6,9 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 09:37:23 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/19 17:02:10 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/24 11:22:36 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef UTILS_H
 # define UTILS_H
@@ -58,7 +57,7 @@ typedef struct s_counter
 	int		exit;
 	int		start;
 	int		movements;
-}			t_counter;
+}			t_count;
 
 typedef struct s_img
 {
@@ -83,8 +82,8 @@ typedef struct s_map
 typedef struct s_game
 {
 	void		*mlx_pointer;
-	void 		*mlx_win;
-	t_counter	i;
+	void		*mlx_win;
+	t_count		i;
 	t_map		plot;
 	t_img		character;
 	t_img		character_l;

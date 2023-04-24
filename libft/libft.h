@@ -6,10 +6,9 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 11:42:54 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/20 11:42:56 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/24 11:29:23 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef LIBFT_H
 # define LIBFT_H

@@ -6,10 +6,9 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 09:36:14 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/20 12:38:17 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/24 11:33:55 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../../includes/so_long.h"
 
@@ -41,6 +40,7 @@ static void	check_left(t_game *game)
 
 static bool	is_left_wall(t_game *game)
 {
-	return (!(game->plot.map[(game->character.y / SPRITE_SIZE)][((game->character.x - SPRITE_SIZE) / SPRITE_SIZE)] != '1') \
+	return (!(game->plot.map[(game->character.y / SPRITE_SIZE)] \
+	[((game->character.x - SPRITE_SIZE) / SPRITE_SIZE)] != '1') \
 	);
 }

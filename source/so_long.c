@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 14:58:23 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/20 11:54:59 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/24 10:51:22 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ bool	check_ber_file(const char *argv)
 	char	*string;
 
 	string = ft_strrchr(argv, '.');
-	// printf("string: %s\n", string);
 	if (string)
 	{
 		return (ft_strcmp(string, ".ber") == 0);

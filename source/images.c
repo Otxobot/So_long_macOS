@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 15:24:36 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/20 12:31:32 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/24 10:52:55 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 void	init_window(t_game *game)
 {
 	game->mlx_pointer = mlx_init();
-	game->mlx_win = mlx_new_window(game->mlx_pointer, (game->plot.length * SPRITE_SIZE), (game->plot.height * SPRITE_SIZE), WINDOW_NAME);
+	game->mlx_win = mlx_new_window(game->mlx_pointer, \
+	(game->plot.length * SPRITE_SIZE), \
+	(game->plot.height * SPRITE_SIZE), WINDOW_NAME);
 }
 
 void	init_images(t_game	*game)

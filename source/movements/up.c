@@ -6,10 +6,9 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 09:36:25 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/24 10:46:17 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/24 11:35:05 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../../includes/so_long.h"
 
@@ -20,7 +19,9 @@ void	move_up(t_game *game)
 {
 	check_up(game);
 	game->character.mem = up;
-	mlx_put_image_to_window(game->mlx_pointer, game->mlx_win, game->character_u.ptr, game->character.x, game->character.y);
+	mlx_put_image_to_window(game->mlx_pointer, \
+	game->mlx_win, game->character_u.ptr, \
+	game->character.x, game->character.y);
 	return ;
 }
 
@@ -31,7 +32,7 @@ static void	check_up(t_game *game)
 		if (!is_up_wall(game))
 		{
 			game->character.y -= SPRITE_SIZE;
-			render_map(game); 
+			render_map(game);
 			print_moves(game);
 		}
 	}

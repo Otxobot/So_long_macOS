@@ -6,10 +6,9 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 09:36:54 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/19 17:06:18 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/24 10:57:13 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../includes/so_long.h"
 
@@ -52,14 +51,13 @@ static void	map_check_one(t_game *game, int y, int x)
 void	render_map(t_game *game)
 {
 	t_point	coord;
-	
+
 	coord.y = 0;
 	while (game->plot.map[coord.y])
 	{
 		coord.x = 0;
 		while (game->plot.map[coord.y][coord.x])
 		{
-			//printf("game->plot.map: %c\n", game->plot.map[coord.y][coord.x]);
 			map_check_one(game, coord.y, coord.x);
 			coord.x++;
 		}

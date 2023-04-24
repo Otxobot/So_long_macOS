@@ -6,7 +6,7 @@
 /*   By: abasante <abasante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 15:24:42 by abasante          #+#    #+#             */
-/*   Updated: 2023/04/20 10:16:29 by abasante         ###   ########.fr       */
+/*   Updated: 2023/04/24 10:53:43 by abasante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	destroy_image(t_game *game)
 	mlx_destroy_image(game->mlx_pointer, game->character_r.ptr);
 	mlx_destroy_image(game->mlx_pointer, game->character_u.ptr);
 	mlx_destroy_window(game->mlx_pointer, game->mlx_win);
-	//mlx_destroy_display(game->mlx_pointer);
 	free_map(game);
 	free(game->mlx_pointer);
 	return ;
